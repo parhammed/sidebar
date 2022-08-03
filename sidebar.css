@@ -11,6 +11,7 @@ body.darkmod #sidebar .head .brand {
   color: #06f !important;
 }
 body.darkmod #sidebar .head #sidebar-btn {
+  background-color: #222;
   color: #06f !important;
 }
 body.darkmod #sidebar .search_group {
@@ -20,6 +21,15 @@ body.darkmod #sidebar .search_group > input[type=text] {
   color: #06f !important;
   background: #333 !important;
 }
+body.darkmod #sidebar .search_group > input[type=text]::-moz-placeholder {
+  color: #06f;
+}
+body.darkmod #sidebar .search_group > input[type=text]:-ms-input-placeholder {
+  color: #06f;
+}
+body.darkmod #sidebar .search_group > input[type=text]::placeholder {
+  color: #06f;
+}
 body.darkmod #sidebar .search_group > button {
   background: #333 !important;
   color: #06f !important;
@@ -27,7 +37,7 @@ body.darkmod #sidebar .search_group > button {
 body.darkmod #sidebar .items {
   background: #333 !important;
 }
-body.darkmod #sidebar .items > a {
+body.darkmod #sidebar .items a, body.darkmod #sidebar .items p, body.darkmod #sidebar .items li {
   color: #06f !important;
 }
 

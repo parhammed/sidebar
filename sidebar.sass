@@ -17,6 +17,7 @@ body
                 .brand
                     color: $text-darkmod!important
                 #sidebar-btn
+                    background-color: $primary-darkmod
                     color: $text-darkmod !important
 
             .search_group
@@ -24,13 +25,15 @@ body
                 > input[type=text]
                     color: $text-darkmod !important
                     background: $secondary-darkmod !important
+                    &::placeholder
+                        color: $text-darkmod
 
                 > button
                     background: $secondary-darkmod !important
                     color: $text-darkmod !important
             .items
                 background: $secondary-darkmod !important
-                > a
+                a, p, li
                     color: $text-darkmod !important
 #sidebar
     position: static

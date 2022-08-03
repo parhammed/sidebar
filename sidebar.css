@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+}
+body.darkmod {
+  background-color: #000 !important;
+}
+body.darkmod #sidebar {
+  background-color: #222 !important;
+}
+body.darkmod #sidebar .head .brand {
+  color: #06f !important;
+}
+body.darkmod #sidebar .head #sidebar-btn {
+  color: #06f !important;
+}
+body.darkmod #sidebar .search_group {
+  background-color: #333 !important;
+}
+body.darkmod #sidebar .search_group > input[type=text] {
+  color: #06f !important;
+  background: #333 !important;
+}
+body.darkmod #sidebar .search_group > button {
+  background: #333 !important;
+  color: #06f !important;
+}
+body.darkmod #sidebar .items {
+  background: #333 !important;
+}
+body.darkmod #sidebar .items > a {
+  color: #06f !important;
+}
+
+#sidebar {
+  position: static;
+  right: 0;
+  top: 0;
+  width: 30%;
+  background-color: #06f;
+  height: 100vh;
+  transition: width 1s ease-out;
+}
+#sidebar .inner-sidebar > *, #sidebar .head > :not(#sidebar-btn) {
+  overflow: hidden;
+}
+#sidebar.hidden {
+  width: 0;
+  transition-timing-function: ease-in;
+}
+@media screen and (max-width: 975px) {
+  #sidebar {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #sidebar {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 585px) {
+  #sidebar {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 420px) {
+  #sidebar {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 300px) {
+  #sidebar {
+    width: 100%;
+  }
+}
+#sidebar .inner-sidebar {
+  margin: 0 2rem;
+  padding-top: 1rem;
+}
+#sidebar .head {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+#sidebar .head #sidebar-btn {
+  display: block;
+  font-size: 2.25rem;
+  color: #000;
+  border: none;
+  background-color: #06f;
+  border-radius: 0 0 0 10px;
+}
+#sidebar .head .brand {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-size: 2.25rem;
+  color: #000;
+}
+#sidebar .search_group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #3887ff;
+  margin-bottom: 1rem;
+}
+#sidebar .search_group > input[type=text] {
+  font-size: 1.5rem;
+  background-color: #3887ff;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: #000;
+}
+#sidebar .search_group > input[type=text]::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+#sidebar .search_group > input[type=text]:-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+#sidebar .search_group > input[type=text]::placeholder {
+  color: #000;
+  opacity: 1;
+}
+#sidebar .search_group > button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #3887ff;
+  color: #000;
+}
+#sidebar .items {
+  border-radius: 20px;
+  background-color: #3887ff;
+}
+#sidebar .items .inner-items {
+  padding: 0 3rem;
+  margin: 0 1rem;
+}
+#sidebar .items .inner-items p, #sidebar .items .inner-items a, #sidebar .items .inner-items li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+#sidebar .items .inner-items .dropdown .triangle::before {
+  font-size: 1rem;
+  transform: rotate(90deg);
+  transition: transform 0.7s;
+}
+#sidebar .items .inner-items .dropdown .dropdown-items {
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: transform 0.7s;
+  transition: max-height 1s;
+}
+#sidebar .items .inner-items .dropdown:hover .triangle::before {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=sidebar.css.map */

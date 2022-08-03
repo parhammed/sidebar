@@ -1,0 +1,142 @@
+$primary: #06f
+$secondary: #3887ff
+$text: #000
+
+// darkmod
+$primary-darkmod: #222
+$secondary-darkmod: #333
+$text-darkmod: #06f
+
+body
+    margin: 0
+    &.darkmod
+        background-color: #000!important
+        #sidebar
+            background-color: $primary-darkmod !important
+            .head
+                .brand
+                    color: $text-darkmod!important
+                #sidebar-btn
+                    color: $text-darkmod !important
+
+            .search_group
+                background-color: $secondary-darkmod !important
+                > input[type=text]
+                    color: $text-darkmod !important
+                    background: $secondary-darkmod !important
+
+                > button
+                    background: $secondary-darkmod !important
+                    color: $text-darkmod !important
+            .items
+                background: $secondary-darkmod !important
+                > a
+                    color: $text-darkmod !important
+#sidebar
+    position: static
+    right: 0
+    top: 0
+    width: 30%
+    background-color: $primary
+    height: 100vh
+    transition: width 1s ease-out
+
+    .inner-sidebar > *, .head > :not(#sidebar-btn)
+        overflow: hidden
+
+    &.hidden
+        width: 0
+        transition-timing-function: ease-in
+
+    @media screen and (max-width: 975px)
+        width: 40%
+    @media screen and (max-width: 768px)
+        width: 50%
+    @media screen and (max-width: 585px)
+        width: 70%
+    @media screen and (max-width: 420px)
+        width: 90%
+    @media screen and (max-width: 300px)
+        width: 100%
+
+    .inner-sidebar
+        margin: 0 2rem
+        padding-top: 1rem
+
+    .head
+        margin-bottom: 2rem
+        display: flex
+        justify-content: space-between
+
+        #sidebar-btn
+            display: block
+            font-size: 2.25rem
+            color: $text
+            border: none
+            background-color: $primary
+            border-radius: 0 0 0 10px
+
+        .brand
+            text-align: center
+            width: 100%
+            margin: 0
+            font-size: 2.25rem
+            color: $text
+
+    .search_group
+        display: flex
+        flex-direction: row-reverse
+        justify-content: space-between
+        border-radius: 10px
+        background-color: $secondary
+        margin-bottom: 1rem
+
+        > input[type=text]
+            font-size: 1.5rem
+            background-color: $secondary
+            border-radius: 10px
+            outline: none
+            border: none
+            width: 100%
+            color: $text
+            &::placeholder
+                color: $text
+                opacity: 1
+
+        > button
+            font-size: 1.5rem
+            border-radius: 10px
+            border: none
+            background-color: $secondary
+            color: $text
+
+    .items
+        border-radius: 20px
+        background-color: $secondary
+        .inner-items
+            padding: 0 3rem
+            margin: 0 1rem
+            
+            p, a, li
+                margin-bottom: 1rem
+                font-size: 1.5rem
+                display: block
+                color: $text
+                text-decoration: none
+            
+            .dropdown
+                .triangle::before
+                    font-size: 1rem
+                    transform: rotate(90deg)
+                    transition: transform .7s
+
+                .dropdown-items
+                    list-style: none
+                    overflow: hidden
+                    max-height: 0
+                    transition: transform .7s
+                    transition: max-height 1s
+                
+                &:hover
+                    .triangle::before
+                        transform: rotate(180deg)
